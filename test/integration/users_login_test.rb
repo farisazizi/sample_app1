@@ -4,14 +4,14 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end\
-  def setup
-    @user = users(:michael)
-  end
+ def setup
+  @user = users(:theusers)
+ end
   
   test "login with invalid info" do
     get login_path
     assert_template 'sessions/new'
-    post login_path, sessions: {email: "", password: ""}
+    post login_path, session: { email: "", password: "" }
     assert_template 'sessions/new'
     assert_not flash.empty?
     get root_path
