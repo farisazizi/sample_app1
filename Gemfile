@@ -5,6 +5,11 @@ ruby '2.1.5'
 gem 'rails', '4.2.1'
 #bcrypt hash
 gem 'bcrypt', '3.1.7'
+#making sample users
+gem 'faker', '1.4.2'
+#pagination
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 #bootstrap stuff
 gem 'bootstrap-sass', '3.2.0.0'
 # Use SCSS for stylesheets
