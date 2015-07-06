@@ -22,7 +22,10 @@ ActiveRecord::Schema.define(version: 20150702122231) do
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
   add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
+end
 
+ActiveRecord::Schema.define(version: 20150618124600) do
+  
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -30,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150702122231) do
     t.datetime "updated_at",                        null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+
     t.boolean  "admin",             default: false
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
@@ -37,7 +41,5 @@ ActiveRecord::Schema.define(version: 20150702122231) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
   end
-
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-
 end
